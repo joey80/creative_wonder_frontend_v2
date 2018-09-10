@@ -1,0 +1,31 @@
+/*
+
+// ==========================================================================
+// Global Styles
+// ==========================================================================
+
+*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #444;
+  background-color: #e2eff1;
+  font-size: 18px;
+  line-height: 1.333rem; }
+
+a:link {
+  text-decoration: none;
+  color: #e33b43;
+  transition: all 0.2s linear; }
+
+a:visited {
+  color: #e33b43; }
+
+a:active {
+  color: #e33b43; }
+
+a:hover {
+  background-color: #f7cacc;
+  text-decoration: underline; }

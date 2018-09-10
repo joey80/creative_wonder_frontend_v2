@@ -1,0 +1,40 @@
+@import 'Variables.scss';
+
+/*
+
+// ==========================================================================
+// Global Styles
+// ==========================================================================
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: $primaryFontColor;
+    background-color: $primaryBackgroundColor;
+    font-size: 18px;
+    line-height: 1.333rem;
+}
+
+a:link {
+    text-decoration: none;
+    color: $primaryRedColor;
+    transition: all 0.2s linear;
+}
+
+a:visited {
+    color: $primaryRedColor;
+}
+
+a:active {
+    color: $primaryRedColor;
+}
+
+a:hover {
+    background-color: $primaryLightRedColor;
+    text-decoration: underline;
+}
