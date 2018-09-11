@@ -3,11 +3,7 @@ import './Content.css';
 
 class Content extends Component {
   render() {
-    return (
-      <div className="Content">
-        I'm the content!!
-      </div>
-    );
+    return <div className="content">I'm the content!!</div>;
   }
 }
 
