@@ -1,0 +1,53 @@
+/*
+
+// ==========================================================================
+// Header Styles
+// ==========================================================================
+
+*/
+.header {
+  top: 0;
+  background-color: #e33b43;
+  height: 80px;
+  width: 100%;
+  color: #fff;
+  z-index: 3;
+}
+@media (min-width: 790px) {
+  .header {
+    position: fixed;
+  }
+}
+.header__container {
+  display: flex;
+  margin: 0 auto;
+  height: inherit;
+  max-width: 100%;
+}
+@media (min-width: 790px) {
+  .header__container {
+    max-width: 1170px;
+  }
+}
+.header__logo {
+  height: 80px;
+  background-color: #e33b43;
+  font-size: 2.2rem;
+  font-family: 'Pacifico', cursive;
+  padding-top: 20px;
+  padding-left: 10px;
+  line-height: 1.2em;
+}
+@media (min-width: 790px) {
+  .header__logo {
+    padding-top: 4px;
+    padding-left: 15px;
+    font-size: 3.45rem;
+    letter-spacing: -0.0099em;
+  }
+}
+@media (min-width: 1025px) {
+  .header__logo {
+    padding-left: 0;
+  }
+}
