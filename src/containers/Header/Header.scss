@@ -10,6 +10,7 @@
 */
 
 .header {
+	position: fixed;
     top: 0;
  	background-color: $primaryRedColor;
  	height: 80px;
@@ -17,12 +18,10 @@
 	color: #fff;
 	z-index: 3;
 
-	@include tablet {
-		position: fixed;
-    }
-
     &__container {
-        display: flex;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
         margin: 0 auto;
         height: inherit;
         max-width: 100%;
@@ -33,23 +32,10 @@
     }
 
     &__logo {
-        height: 80px;
- 		background-color: $primaryRedColor;
- 		font-size: 2.2rem;
- 		font-family: 'Pacifico', cursive;
- 		padding-top: 20px;
- 		padding-left: 10px;
- 		line-height: 1.2em; // change this
-
- 		@include tablet {
- 			padding-top: 4px;
- 			padding-left: 15px; 
- 			font-size: 3.45rem;
- 			letter-spacing: -0.0099em; // change this 
- 		}
-
- 		@include desktop {
- 			padding-left: 0;
-        }
+		background-image: url('../../assets/images/logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 349px;
+		height: 76px;
     }
 }

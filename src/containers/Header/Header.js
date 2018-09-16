@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header__container">
-          <div className="header__logo">CreativeWonder</div>
+          <div className="header__logo"></div>
           <div>MENU BUTTON</div>
         </div>
         <Nav />
