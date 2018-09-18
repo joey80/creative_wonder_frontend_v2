@@ -22,20 +22,35 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 0 10px 0 10px;
         margin: 0 auto;
         height: inherit;
         max-width: 100%;
 
         @include tablet {
-            max-width: 1170px;
-        }
+			max-width: 1170px;
+		}
+		
+		@include desktop {
+			padding: 0;
+		}
     }
 
     &__logo {
 		background-image: url('../../assets/images/logo.png');
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 349px;
-		height: 76px;
+		width: 329px;
+		height: 56px;
+
+		@include tablet {
+			width: 339px;
+			height: 66px;
+		}
+
+		@include desktop {
+			width: 349px;
+			height: 76px;
+		}
     }
 }

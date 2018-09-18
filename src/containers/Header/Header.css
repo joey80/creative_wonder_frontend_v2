@@ -17,15 +17,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px 0 10px;
     margin: 0 auto;
     height: inherit;
     max-width: 100%; }
-    @media (min-width: 790px) {
+    @media (min-width: 768px) {
       .header__container {
         max-width: 1170px; } }
+    @media (min-width: 1025px) {
+      .header__container {
+        padding: 0; } }
   .header__logo {
     background-image: url("../../assets/images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 349px;
-    height: 76px; }
+    width: 329px;
+    height: 56px; }
+    @media (min-width: 768px) {
+      .header__logo {
+        width: 339px;
+        height: 66px; } }
+    @media (min-width: 1025px) {
+      .header__logo {
+        width: 349px;
+        height: 76px; } }
