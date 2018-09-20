@@ -1,10 +1,18 @@
 import React from 'react';
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Nav from './Nav';
-import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-  const nav = renderer
-    .create(<Nav />)
-    .toJSON()
-  expect(nav).toMatchSnapshot()
+configure({ adapter: new Adapter() });
+
+describe('Component: Nav', () => {
+
+    it('renders without exploding', () => {
+        expect(
+            shallow(
+                <Nav />
+            ).length
+        ).toEqual(1);
+    });
+
 });

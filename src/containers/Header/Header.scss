@@ -40,17 +40,17 @@
 		background-image: url('../../assets/images/logo.png');
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 329px;
-		height: 56px;
+		width: 330px;
+		height: 72px;
 
 		@include tablet {
-			width: 339px;
-			height: 66px;
+			width: 340px;
+			height: 74px;
 		}
 
 		@include desktop {
-			width: 349px;
-			height: 76px;
+			width: 349px; // 698
+			height: 76px; // 152
 		}
     }
 }
