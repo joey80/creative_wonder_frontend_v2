@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 import Nav from '../../components/Nav/Nav';
+import Button from '../../components/Button/Button';
 
 class Header extends Component {
   render() {
@@ -8,7 +9,9 @@ class Header extends Component {
       <div className="header">
         <div className="header__container">
           <div className="header__logo"></div>
-          <div>MENU BUTTON</div>
+          <Button buttonText="Main Menu"
+                  buttonClass="button__header button__header--off"
+                  buttonTextClass="button__header__text" />
         </div>
         <Nav />
       </div>
