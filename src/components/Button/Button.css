@@ -71,7 +71,6 @@
       content: '\f0c9';
       font-weight: normal;
       font-style: normal;
-      color: #fff;
       text-decoration: inherit; }
       @media (min-width: 768px) {
         .button__header__hamburger:after {
@@ -85,7 +84,7 @@
           font-weight: normal;
           font-style: normal;
           display: inline-block;
-          padding-left: 3px;
+          padding-left: 6px;
           content: '\f077';
           text-decoration: inherit; } }
     .button__header--off:after {
