@@ -8,10 +8,20 @@ This is a demo website for a fictional preschool called Creative Wonder. This is
 
 ## Built With
 
+Framework
 * [React](https://reactjs.org/)
+
+Styling
+* [Sass](https://sass-lang.com/)
+
+Build Tools
 * [Webpack](https://webpack.js.org/)
 * [Babel](https://babeljs.io/)
-* [Sass](https://sass-lang.com/)
+
+Testing
+* [Jest](https://jestjs.io/)
+* [Enzyme](http://airbnb.io/enzyme/)
+
 
 ## Authors
 

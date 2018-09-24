@@ -4,9 +4,9 @@ import './Nav.css';
 class Nav extends Component {
   render() {
     return (
-      <div className={`nav nav--${this.props.menuPosition}`}>
+      <div className={`nav nav--${this.props.isMenuOpen ? "down" : "hidden"}`}>
         <div className="nav__container">
-          <ul className={`nav__list__first ${this.props.linkAnimation}`}>
+          <ul className={`nav__list__first ${this.props.areLinksVisible ? "nav--down" : ""}`}>
             <li>Home</li>
             <li>About</li>
             <li>Examples</li>

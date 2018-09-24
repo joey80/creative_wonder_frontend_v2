@@ -13,19 +13,23 @@ class Header extends Component {
     }
   }
 
+  // Controls the nav menu
   toggleMenu() {
     const menuState = this.state.menuOpen;
+
     if(menuState) {
+      // Hide the links then hide the nav menu
+      setTimeout(() => {
+        this.setState({ menuOpen: !menuState });
+      }, 150);
       this.setState({ showLinks: !menuState });
-      this.setState({ menuOpen: !menuState });
     } else {
-      //show animate links
+      // Show the nav menu then show the links
       setTimeout(() => {
         this.setState({ showLinks: !menuState });
       }, 300);
       this.setState({ menuOpen: !menuState });
     }
-    
   }
 
   render() {
@@ -36,12 +40,12 @@ class Header extends Component {
             <div className="header__logo"></div>
             <Button onClick={this.toggleMenu}
                     buttonText="Main Menu"
-                    buttonClass={`button__header button__header--${this.state.menuOpen ? 'on': 'off'}`}
-                    buttonTextClass="button__header__text" />
+                    isNavButton={true}
+                    isMenuOpen={this.state.menuOpen} />
           </div>
         </div>
-        <Nav menuPosition={`${this.state.menuOpen ? 'down': 'hidden'}`}
-             linkAnimation={`${this.state.showLinks ? 'nav--down': ''}`} />
+        <Nav isMenuOpen={this.state.menuOpen}
+             areLinksVisible={this.state.showLinks} />
       </div>
     );
   }
