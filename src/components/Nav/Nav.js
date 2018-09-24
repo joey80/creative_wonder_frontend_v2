@@ -10,15 +10,15 @@ class Nav extends Component {
             <li>Home</li>
             <li>About</li>
             <li>Examples</li>
-            <li class="nav__arrow">Blog
-              <ul class="nav__list__second">
+            <li className="nav__arrow">Blog
+              <ul className="nav__list__second">
                 <li>Nintendo</li>
                 <li>Sony</li>
                 <li>Microsoft</li>
               </ul>
             </li>
-            <li class="nav__arrow">Gallery
-              <ul class="nav__list__second">
+            <li className="nav__arrow">Gallery
+              <ul className="nav__list__second">
                 <li>Go To Bed</li>
                 <li>Brush Teeth</li>
                 <li>Floss</li>

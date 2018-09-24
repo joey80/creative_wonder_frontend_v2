@@ -74,6 +74,12 @@
             width: 181px;
         }
 
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         &:focus {
 
             @include tablet {
@@ -102,7 +108,7 @@
         &__hamburger:after {
             display: inline-block;
             font-family: FontAwesome;
-            font-size: .9em;
+            font-size: 1.4rem;
             content: '\f0c9';
             font-weight: normal;
             font-style: normal;
@@ -115,6 +121,8 @@
 
         &--on:after {
             display: none;
+            width: 0;
+            height: 0;
 
             @include tablet {
                 font-family: FontAwesome;

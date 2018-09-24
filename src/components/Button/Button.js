@@ -6,10 +6,12 @@ class Button extends Component {
   renderButton() {
     if(this.props.isNavButton) {
       return(
-        <button className={`button__header button__header--${this.props.isMenuOpen ? "on" : "off"}`} onClick={this.props.onClick}>
-          <span className="button__header__hamburger"></span>
-          <span className="button__header__text">{this.props.buttonText}</span>
-        </button>
+        <div className="button__header__container">
+          <button className={`button__header button__header--${this.props.isMenuOpen ? "on" : "off"}`} onClick={this.props.onClick}>
+            <span className="button__header__text">{this.props.buttonText}</span>
+          </button>
+          <span className="button__header__hamburger" onClick={this.props.mobileClick}></span>
+        </div>
       );
     } else {
       return(

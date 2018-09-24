@@ -49,6 +49,10 @@
         border: 1px solid rgba(230, 230, 230, 0.3);
         height: 44px;
         width: 181px; } }
+    .button__header__container {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     @media (min-width: 768px) {
       .button__header:focus {
         outline: 1px dotted #fff; } }
@@ -65,7 +69,7 @@
     .button__header__hamburger:after {
       display: inline-block;
       font-family: FontAwesome;
-      font-size: .9em;
+      font-size: 1.4rem;
       content: '\f0c9';
       font-weight: normal;
       font-style: normal;
@@ -74,7 +78,9 @@
         .button__header__hamburger:after {
           display: none; } }
     .button__header--on:after {
-      display: none; }
+      display: none;
+      width: 0;
+      height: 0; }
       @media (min-width: 768px) {
         .button__header--on:after {
           font-family: FontAwesome;

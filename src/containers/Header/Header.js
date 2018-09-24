@@ -7,6 +7,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
     this.state = {
       menuOpen: false,
       showLinks: false
@@ -32,6 +33,10 @@ class Header extends Component {
     }
   }
 
+  toggleMobileMenu() {
+    alert('mobile menu');
+  }
+
   render() {
     return (
       <div>
@@ -39,6 +44,7 @@ class Header extends Component {
           <div className="header__container">
             <div className="header__logo"></div>
             <Button onClick={this.toggleMenu}
+                    mobileClick={this.toggleMobileMenu}
                     buttonText="Main Menu"
                     isNavButton={true}
                     isMenuOpen={this.state.menuOpen} />
