@@ -6,7 +6,7 @@
 
 */
 .nav {
-  display: none;
+  position: absolute;
   top: 0;
   font-family: 'Lato', sans-serif;
   width: 100%;
@@ -127,11 +127,9 @@
         content: '\f078';
         text-decoration: inherit; } }
   .nav--hidden {
-    transition: all .4s ease; }
-    @media (min-width: 768px) {
-      .nav--hidden {
-        margin-top: 0;
-        transform: translateY(-100%); } }
+    margin-top: 0;
+    transition: all .4s ease;
+    transform: translateY(-100%); }
   .nav--down {
     transition: all .4s ease-out;
     transform: translateY(0);

@@ -10,7 +10,7 @@
 */
 
 .nav {
-	display: none;
+    position: absolute;
 	top: 0;
 	font-family: 'Lato', sans-serif;
 	width: 100%;
@@ -170,12 +170,9 @@
 	}
 
 	&--hidden {
-		transition: all .4s ease;
-
-		@include tablet {
-			margin-top: 0;
-			transform: translateY(-100%);
-		}
+        margin-top: 0;
+        transition: all .4s ease;
+        transform: translateY(-100%);
 	}
 
 	&--down {

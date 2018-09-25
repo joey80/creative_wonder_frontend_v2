@@ -18,6 +18,10 @@
 	color: #fff;
 	z-index: 3;
 
+	&__section {
+		position: relative;
+	}
+
     &__container {
 		display: flex;
 		justify-content: space-between;
@@ -40,6 +44,7 @@
 		background-image: url('../../assets/images/logo.png');
 		background-size: contain;
 		background-repeat: no-repeat;
+		background-position: center;
 		width: 330px;
 		height: 72px;
 

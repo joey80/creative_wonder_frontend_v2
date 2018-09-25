@@ -7,10 +7,10 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.toggleMenu = this.toggleMenu.bind(this);
-    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
     this.state = {
       menuOpen: false,
-      showLinks: false
+      showLinks: false,
+      isMobile: false
     }
   }
 
@@ -33,21 +33,18 @@ class Header extends Component {
     }
   }
 
-  toggleMobileMenu() {
-    alert('mobile menu');
-  }
 
   render() {
     return (
-      <div>
+      <div className="header__section">
         <div className="header">
           <div className="header__container">
             <div className="header__logo"></div>
             <Button onClick={this.toggleMenu}
-                    mobileClick={this.toggleMobileMenu}
-                    buttonText="Main Menu"
                     isNavButton={true}
-                    isMenuOpen={this.state.menuOpen} />
+                    isMenuOpen={this.state.menuOpen}>
+              Main Menu
+            </Button>
           </div>
         </div>
         <Nav isMenuOpen={this.state.menuOpen}

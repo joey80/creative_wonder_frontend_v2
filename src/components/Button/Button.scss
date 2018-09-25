@@ -56,18 +56,16 @@
     }
     
     &__header {
-        font-family: 'Lato', sans-serif;
-        font-size: 1.2rem;
-        cursor: pointer;
-        border: 0;
-        background-color: $primaryRedColor;
+        background-color: transparent;
         color: #fff;
-        padding: 7px;
-        height: 44px;
-        width: 40px;
-        //transition: all 0.2s linear;
+        border: 0;
 
         @include tablet {
+            display: block;
+            font-family: 'Lato', sans-serif;
+            cursor: pointer;
+            background-color: $primaryRedColor;
+            padding: 7px;
             font-size: .85rem;
             border: 1px solid rgba(230, 230, 230, 0.3);
             height: 44px;
@@ -93,7 +91,6 @@
                 color: #d91122;
                 border-color: #fff;
                 background-color: #fff;
-                //transition: all 0.2s linear;
             }
         }
 
@@ -121,8 +118,6 @@
 
         &--on:after {
             display: none;
-            width: 0;
-            height: 0;
 
             @include tablet {
                 font-family: FontAwesome;
