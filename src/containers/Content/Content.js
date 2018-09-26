@@ -5,10 +5,7 @@ import Intro from '../Intro/Intro';
 class Content extends Component {
   render() {
     return (
-      <div>
-        <Intro />
-        <div className="content">I'm the content!!</div>
-      </div>
+      <Intro />
     );
   }
 }
