@@ -18,7 +18,8 @@
   .intro__container {
     display: flex;
     flex-direction: column;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
     @media (min-width: 768px) {
       .intro__container {
         flex-direction: row;
@@ -28,7 +29,7 @@
     font-size: 1em;
     line-height: 1.7em;
     padding: 0.5rem;
-    margin-top: 20px; }
+    margin: 0 auto; }
     @media (min-width: 768px) {
       .intro__content {
         flex-grow: 1;
@@ -41,9 +42,17 @@
       margin-top: 0; }
   .intro__video {
     flex-grow: 1;
-    min-width: 50%; }
+    min-width: 90%;
+    margin: 0 auto;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .intro__video {
+        min-width: 50%; } }
   .intro__video iframe {
     vertical-align: top;
     border: 0;
     height: 300px;
-    min-width: 95%; }
+    min-width: 100%; }
+    @media (min-width: 768px) {
+      .intro__video iframe {
+        min-width: 90%; } }

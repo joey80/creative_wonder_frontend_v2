@@ -26,6 +26,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        width: 100%;
 
         @include tablet {
             flex-direction: row;
@@ -38,7 +39,7 @@
 		font-size: 1em;
         line-height: 1.7em;
         padding: 0.5rem;
-        margin-top: 20px;
+        margin: 0 auto;
         
         @include tablet {
             flex-grow: 1;
@@ -57,14 +58,23 @@
     
     &__video {
         flex-grow: 1;
-        min-width: 50%;
+        min-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include tablet {
+            min-width: 50%;
+        }
     }
 
 	&__video iframe {
 		vertical-align: top;
 		border: 0;
-		height: 300px;
-        min-width: 95%;
+        height: 300px;
+        min-width: 100%;
         
+        @include tablet {
+            min-width: 90%;
+        }
 	}
 }
