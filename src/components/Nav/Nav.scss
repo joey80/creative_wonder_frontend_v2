@@ -10,7 +10,6 @@
 */
 
 .nav {
-    //position: absolute;
     position: fixed;
 	top: 0;
 	font-family: 'Lato', sans-serif;
@@ -34,11 +33,15 @@
     
     &__container {
         max-width: 100%;
+        max-height: 500px;
+        overflow-y: scroll;
         margin: 0 auto;
         height: inherit;
 
         @include tablet {
             max-width: 1170px;
+            max-height: 100%;
+            overflow: initial;
         }
     }
 

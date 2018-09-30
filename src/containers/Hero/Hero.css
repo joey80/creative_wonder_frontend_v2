@@ -75,14 +75,11 @@
         line-height: 1.6em;
         transform: translateY(40px); } }
     .hero__content__title {
-      font-size: 1.3em;
+      font-size: 1.45em;
       font-weight: 800;
       line-height: 1.1em;
       display: inline-block;
       margin-bottom: 3px; }
-      @media (min-width: 768px) {
-        .hero__content__title {
-          font-size: 1.45em; } }
       @media (min-width: 1025px) {
         .hero__content__title {
           font-size: 1.8em; } }
@@ -93,7 +90,7 @@
     background-image: url("../../assets/images/large-hero__rocket--small@2x.png");
     background-repeat: no-repeat;
     background-size: 314px 153px;
-    transform: translateY(160px); }
+    transform: translateY(220px); }
     @media (min-width: 768px) {
       .hero__ship {
         width: 446px;

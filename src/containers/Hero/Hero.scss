@@ -96,15 +96,11 @@
 		}
 
 		&__title {
-			font-size: 1.3em;
+			font-size: 1.45em;
 			font-weight: 800;
 			line-height: 1.1em;
 			display: inline-block;
 			margin-bottom: 3px;
-
-			@include tablet {
-				font-size: 1.45em;
-			}
 
 			@include desktop {
 				font-size: 1.8em;
@@ -119,7 +115,7 @@
 		background-image: url('../../assets/images/large-hero__rocket--small@2x.png');
 		background-repeat: no-repeat;
 		background-size: 314px 153px;
-		transform: translateY(160px);
+		transform: translateY(220px);
 
 		@include tablet {
 			width: 446px;
