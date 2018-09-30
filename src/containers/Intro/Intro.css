@@ -8,10 +8,12 @@
 .intro {
   display: inline-block;
   margin: 10px auto 0 auto;
-  width: 100%; }
+  width: 100%;
+  padding: .5rem; }
   @media (min-width: 768px) {
     .intro {
-      margin: 0px auto 0 auto; } }
+      margin: 0px auto 0 auto;
+      padding: 0; } }
   @media (min-width: 1025px) {
     .intro {
       margin: -200px auto 0 auto; } }
@@ -29,7 +31,7 @@
     font-size: 1em;
     line-height: 1.7em;
     padding: 0.5rem;
-    margin: 0 auto; }
+    margin: 40px auto; }
     @media (min-width: 768px) {
       .intro__content {
         flex-grow: 1;

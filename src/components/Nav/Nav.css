@@ -6,7 +6,7 @@
 
 */
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   font-family: 'Lato', sans-serif;
   width: 100%;
