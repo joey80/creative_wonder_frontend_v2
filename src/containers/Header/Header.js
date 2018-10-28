@@ -7,6 +7,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.toggleMenuScroll = this.toggleMenuScroll.bind(this);
     this.state = {
       menuOpen: false,
       showLinks: false,
@@ -31,6 +32,25 @@ class Header extends Component {
       }, 300);
       this.setState({ menuOpen: !menuState });
     }
+  }
+
+  toggleMenuScroll() {
+    const menuState = this.state.menuOpen;
+
+    if(menuState) {
+      // Hide the links then hide the nav menu
+      setTimeout(() => {
+        this.setState({ menuOpen: false });
+      }, 150);
+      this.setState({ showLinks: false });
+    } else {
+      return;
+    }
+
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.toggleMenuScroll);
   }
 
 
