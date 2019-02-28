@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './Content.css';
 import Intro from '../Intro/Intro';
+import Chalkboard from '../Chalkboard/Chalkboard';
 
 class Content extends Component {
   render() {
     return (
-      <Intro />
+      <div>
+        <Intro />
+        <Chalkboard />
+      </div>
     );
   }
 }

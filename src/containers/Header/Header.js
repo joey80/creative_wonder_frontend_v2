@@ -7,7 +7,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.toggleMenu = this.toggleMenu.bind(this);
-    this.toggleMenuScroll = this.toggleMenuScroll.bind(this);
+    this.closeMenuOnScroll = this.closeMenuOnScroll.bind(this);
     this.state = {
       menuOpen: false,
       showLinks: false,
@@ -34,7 +34,8 @@ class Header extends Component {
     }
   }
 
-  toggleMenuScroll() {
+  // Closes the nav menu when user starts to scroll
+  closeMenuOnScroll() {
     const menuState = this.state.menuOpen;
 
     if(menuState) {
@@ -50,7 +51,7 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.toggleMenuScroll);
+    window.addEventListener('scroll', this.closeMenuOnScroll);
   }
 
 
