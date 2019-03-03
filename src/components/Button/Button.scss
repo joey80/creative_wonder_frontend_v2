@@ -48,6 +48,7 @@
 	}
 
 	&--small {
+        font-size: 0.9rem;
 		padding: 7px 20px;
 
 		@include tablet {

@@ -13,6 +13,12 @@ class Button extends Component {
           </button>
         </div>
       );
+    } else if (this.props.isSmall) {
+      return(
+        <button className="button button--small" onClick={this.props.onClick}>
+          {this.props.children}
+        </button>
+      );
     } else {
       return(
         <button className="button" onClick={this.props.onClick}>

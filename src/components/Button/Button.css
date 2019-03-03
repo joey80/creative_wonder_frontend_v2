@@ -36,6 +36,7 @@
   .button--large {
     font-size: 1.1em; }
   .button--small {
+    font-size: 0.9rem;
     padding: 7px 20px; }
   .button__header {
     background-color: transparent;

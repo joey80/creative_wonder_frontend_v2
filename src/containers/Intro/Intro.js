@@ -11,7 +11,7 @@ class Intro extends Component {
             </Title>
             <div className="intro__container">
                 <div className="intro__video">
-                    <iframe src='http://www.youtube.com/embed/PZY-hB2C_Iw?wmode=transparent' allowfullscreen className="no-border" title="Preschool Video"></iframe>
+                    <iframe src='http://www.youtube.com/embed/PZY-hB2C_Iw?wmode=transparent' allowFullScreen className="no-border" title="Preschool Video"></iframe>
                 </div>
                 <div className="intro__content">
                     <p>Creative Wonder Early Learning Center provides a high standard of care, education and learning opportunities.
