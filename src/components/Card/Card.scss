@@ -10,6 +10,8 @@
 */
 
 .card {
+	position: relative;
+	margin: 0 auto 1rem auto;
 	background-color: #fff;
 	height: 400px;
 	transition: all .2s ease-in-out;
@@ -29,11 +31,12 @@
 		font-size: 0.85rem;
 
 		@include tablet {
-			font-size: 0.75rem;
+			font-size: 1rem;
 		}
 
-		@include desktop {
-			font-size: 1rem;
+		& a {
+			position: absolute;
+			bottom: 10px;
 		}
 	}
 

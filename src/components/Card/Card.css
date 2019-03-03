@@ -6,6 +6,8 @@
 
 */
 .card {
+  position: relative;
+  margin: 0 auto 1rem auto;
   background-color: #fff;
   height: 400px;
   transition: all .2s ease-in-out;
@@ -22,10 +24,10 @@
     font-size: 0.85rem; }
     @media (min-width: 768px) {
       .card__content {
-        font-size: 0.75rem; } }
-    @media (min-width: 1025px) {
-      .card__content {
         font-size: 1rem; } }
+    .card__content a {
+      position: absolute;
+      bottom: 10px; }
   .card__image {
     line-height: 150px;
     width: 100%;
