@@ -11,23 +11,22 @@ class Card extends Component {
           <div className="card__image" style={{  backgroundImage: "url(" + this.props.imgUrl + ")" }}>
             <div className="card__overlay">
               <Button isSmall>Read More</Button>
-            </div>{/* .card__overlay end */}
-          </div>{/* .card__image end */}
-        </div>{/* .card__image__container end */}
+            </div>
+          </div>
+        </div>
         <div className="card__title">
           {this.props.title}
         </div>
         <hr />
         <div className="card__content">
           <p>{this.props.children}</p>
-          <p><a href="{this.props.link}">Read More . . . </a></p>
-        </div>{/* .card__content end */}
+          <p><a href={this.props.link}>Read More . . . </a></p>
+        </div>
       </div>
     );
   }
 
   render() {
-    console.log(this.props);
     return this.renderCard();
   }
 }
