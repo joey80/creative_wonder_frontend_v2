@@ -1,0 +1,21 @@
+@import '../../components/Global/Variables.scss';
+@import '../../components/Global/Mixins.scss';
+
+/*
+
+// ==========================================================================
+// Blog Styles
+// ==========================================================================
+
+*/
+
+.blog {
+    
+    &__container {
+        margin: 0 auto;
+        max-width: $container-maxWidth;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

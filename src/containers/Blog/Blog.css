@@ -1,0 +1,13 @@
+/*
+
+// ==========================================================================
+// Blog Styles
+// ==========================================================================
+
+*/
+.blog__container {
+  margin: 0 auto;
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
