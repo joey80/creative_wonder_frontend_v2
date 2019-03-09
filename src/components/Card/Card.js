@@ -17,7 +17,7 @@ class Card extends Component {
           </div>
           <div className="card__blog__content">
             {this.props.children}
-            <p><a href={this.props.link}>Read More . . . </a></p>
+            <p><a href={this.props.link} class="card__blog__content__link">Read More . . . </a></p>
           </div>
         </div>
       );

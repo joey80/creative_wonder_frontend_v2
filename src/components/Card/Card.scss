@@ -87,20 +87,35 @@
 
 	&__blog {
 		background-image: url("../../assets/images/blog__card__bg.png");
-		height: 500px;
+		position: relative;
+		max-height: 450px;
 		padding: 18px;
-		max-width: 48%;
+		width: 100%;
+		border-radius: 10px;
+		margin: 0 auto 1rem auto;
+
+		@include desktop {
+			max-width: 48%;
+		}
 
 		&__content {
+			margin-top: 1rem;
+			padding-bottom: 1rem;
+			line-height: 1.5;
 
 			@include desktop {
-				line-height: 1.7em;
-				font-size: 1.1em;
+				line-height: 1.7rem;
+				font-size: 1.1rem;
+			}
+
+			&__link {
+				position: absolute;
+				bottom: 10px;
 			}
 		}
 		
 		&__date {
-			font-size: 0.9em;
+			font-size: 0.9rem;
 			font-weight: bold;
 			padding-top: 10px;
 			color: #d91122;
@@ -108,11 +123,11 @@
 
 			@include tablet {
 				padding: 10px 0 10px 0;
-				font-size: 1.2em;
+				font-size: 1.2rem;
 			}
 
 			@include desktop {
-				font-size: 1.4em;
+				font-size: 1.4rem;
 			}
 		}
 
@@ -120,7 +135,7 @@
 			float: left;
 			width: 150px;
 			height: 150px;
-			margin: 10px;
+			margin: 10px 30px 10px 10px;
 			border-radius: 50%;
 			border: 3px solid #fff;
 			overflow: hidden;
@@ -128,7 +143,6 @@
 			@include tablet {
 				width: 140px;
 				height: 140px;
-				margin: 10px;
 			}
 
 			@include desktop {
@@ -139,19 +153,20 @@
 		}
 
 		&__title {
-			font-size: 1.3em;
+			font-size: 1.3rem;
 			font-weight: bold;
 			text-transform: uppercase;
 			color: #222;
 			text-align: left;
+			line-height: 1.3;
 
 			@include tablet {
-				font-size: 1.2em;
+				font-size: 1.2rem;
 			}
 
 			@include desktop {
 				padding-top: 2px;
-				font-size: 1.6em;
+				font-size: 1.6rem;
 			}
 		}
 	}

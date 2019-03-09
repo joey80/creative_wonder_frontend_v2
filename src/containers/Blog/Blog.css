@@ -9,5 +9,10 @@
   margin: 0 auto;
   max-width: 1170px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px; }
+  @media (min-width: 1025px) {
+    .blog__container {
+      flex-direction: row;
+      padding: initial; } }

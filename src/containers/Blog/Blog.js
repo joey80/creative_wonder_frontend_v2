@@ -13,7 +13,7 @@ class Blog extends Component {
             <div className="blog__container">
                 <Card
                     blog
-                    imgUrl = {'http://joeyui.byethost7.com/creative-wonder/assets/images/blog__card__image--one.jpg'}
+                    imgUrl = {'https://res.cloudinary.com/hwzdnifrp/image/upload/c_scale,w_899/v1552164379/cw-blog1.jpg'}
                     title = {'The Power Of Play In The Early Learning Environment'}
                     date = {'Mar 1st 2019'}
                     link = {'#'}>
@@ -24,7 +24,7 @@ class Blog extends Component {
                 </Card>
                 <Card
                     blog
-                    imgUrl = {'http://joeyui.byethost7.com/creative-wonder/assets/images/blog__card__image--two.jpg'}
+                    imgUrl = {'https://res.cloudinary.com/hwzdnifrp/image/upload/c_scale,w_681/v1552164293/cw-blog2.jpg'}
                     title = {'Teaching Children To Ask For Help'}
                     date = {'Mar 6th 2019'}
                     link = {'#'}>

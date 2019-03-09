@@ -15,7 +15,13 @@
         margin: 0 auto;
         max-width: $container-maxWidth;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        padding: 10px;
+
+        @include desktop {
+            flex-direction: row;
+            padding: initial;
+        }
     }
 }
