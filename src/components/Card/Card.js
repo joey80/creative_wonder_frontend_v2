@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
 import './Card.css';
+import 'intersection-observer';
 
 class Card extends Component {
 
