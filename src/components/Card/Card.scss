@@ -17,7 +17,11 @@
 	transition: all .2s ease-in-out;
 	box-shadow: 0 14px 28px rgba(10, 10, 10, 0);
 	border: 2px solid transparent;
-	max-width: 350px;
+	width: 100%;
+
+	@include desktop {
+		max-width: 350px;
+	}
 
 	&__title {
 		display: inline-block;
