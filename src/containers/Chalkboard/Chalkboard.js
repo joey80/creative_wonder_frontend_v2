@@ -13,7 +13,7 @@ class Chalkboard extends Component {
           <Title isLight>Communication Board</Title>
           <div className="chalkboard__card__container">
             <Card
-              imgUrl = {"http://joeyui.byethost7.com/creative-wonder/assets/images/card__image__bg--one.jpg"}
+              imgUrl = {"https://res.cloudinary.com/hwzdnifrp/image/upload/v1552178360/card__image__bg--one.jpg"}
               title = {"Back To School Night!"}
               link = {"#"}>
               Back to School Night is a time for parents and teachers to share information as a classroom
@@ -21,7 +21,7 @@ class Chalkboard extends Component {
               term plans for the Pre-School, and learn more about a typical day in the classroom for your children.
             </Card>
             <Card
-              imgUrl = {"http://joeyui.byethost7.com/creative-wonder/assets/images/card__image__bg--two.jpg"}
+              imgUrl = {"https://res.cloudinary.com/hwzdnifrp/image/upload/v1552178360/card__image__bg--two.jpg"}
               title = {"Earth Day Project"}
               link = {"#"}>
               Earth Day is an important day set aside to inspire appreciation for and awareness of the earth's
@@ -29,7 +29,7 @@ class Chalkboard extends Component {
               an appreciation of the planet and a dedication to protecting its natural resources.
             </Card>
             <Card
-              imgUrl = {"http://joeyui.byethost7.com/creative-wonder/assets/images/card__image__bg--three.jpg"}
+              imgUrl = {"https://res.cloudinary.com/hwzdnifrp/image/upload/v1552178360/card__image__bg--three.jpg"}
               title = {"Learning About Space!"}
               link = {"#"}>
               The students were asked by their teacher what they wanted to learn about next and the children chose

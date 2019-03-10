@@ -43,7 +43,8 @@
     max-width: 100%;
     min-width: 100%; }
   .hero__text {
-    width: 100%; }
+    width: 100%;
+    line-height: 1.5; }
     @media (min-width: 768px) {
       .hero__text {
         max-width: 80%; } }

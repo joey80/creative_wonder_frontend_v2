@@ -16,6 +16,8 @@
 	height: 400px;
 	transition: all .2s ease-in-out;
 	box-shadow: 0 14px 28px rgba(10, 10, 10, 0);
+	border: 2px solid transparent;
+	max-width: 350px;
 
 	&__title {
 		display: inline-block;
@@ -55,10 +57,6 @@
 			height: 150px;
 			overflow: hidden;
 		}
-
-		&:hover {
-			transform: scale(1);
-		}
 	}
 
 	&__overlay {
@@ -66,8 +64,9 @@
 		background: rgba(255,255,255,.6);
 		transition: all .2s linear;
 
-		&:hover {
-			opacity: 1;
+		& > button {
+			transform: translateY(10px);
+			transition: all 0.3s ease-in-out;
 		}
 	}
 
@@ -83,6 +82,19 @@
 	&:hover {
 		box-shadow: 0 14px 28px rgba(10, 10, 10, 1), 0 10px 10px rgba(10, 10, 10, 0.22);
 		transition: all .2s ease-in-out;
+	}
+
+	&:hover .card__overlay {
+		opacity: 1;
+
+		& > button {
+			transform: translateY(0);
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&:hover .card__image {
+		transform: scale(1);
 	}
 
 	&__blog {
