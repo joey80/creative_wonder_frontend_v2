@@ -2,29 +2,9 @@ import React, { Component } from 'react';
 import Button from '../Button/Button';
 import './Card.css';
 import 'intersection-observer';
+import { lazyLoad } from '../../util/LazyLoad';
 
 class Card extends Component {
-
-  lazyLoad(target, type) {
-    const io = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const tgt = entry.target;
-          const src = tgt.getAttribute('data-src');
-
-          if (type === 'img') {
-            tgt.setAttribute('src', src);
-
-          } if (type === 'div') {
-            tgt.style.backgroundImage = `url(${src})`;
-          }
-          observer.disconnect();
-        }
-      })
-    });
-
-    io.observe(target);
-  };
 
   renderCard() {
     if(this.props.blog) {
@@ -71,10 +51,10 @@ class Card extends Component {
     const divTargets = document.querySelectorAll('.card__image');
     
     imgTargets.forEach((elm) => {
-      this.lazyLoad(elm, 'img');
+      lazyLoad(elm, 'img');
     });
     divTargets.forEach((elm) => {
-      this.lazyLoad(elm, 'div');
+      lazyLoad(elm, 'div');
     });
   }
 
