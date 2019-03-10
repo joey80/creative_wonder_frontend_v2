@@ -4,11 +4,27 @@ import './Card.css';
 
 class Card extends Component {
 
+  lazyLoad(target) {
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const src = img.getAttribute('data-src');
+
+          img.setAttribute('src', src);
+          observer.disconnect();
+        }
+      })
+    });
+
+    io.observe(target);
+  };
+
   renderCard() {
     if(this.props.blog) {
       return(
         <div className="card__blog">
-          <img src={this.props.imgUrl} alt={this.props.title} className="card__blog__image" />
+          <img data-src={this.props.imgUrl} alt={this.props.title} className="card__blog__image" />
           <div className="card__blog__date">
             {this.props.date}
           </div>
@@ -17,7 +33,7 @@ class Card extends Component {
           </div>
           <div className="card__blog__content">
             {this.props.children}
-            <p><a href={this.props.link} class="card__blog__content__link">Read More . . . </a></p>
+            <p><a href={this.props.link} className="card__blog__content__link">Read More . . . </a></p>
           </div>
         </div>
       );
@@ -42,6 +58,11 @@ class Card extends Component {
         </div>
       );
     }
+  }
+
+  componentDidMount() {
+    const targets = document.querySelectorAll('.card__blog__image');
+    targets.forEach(this.lazyLoad);
   }
 
   render() {
