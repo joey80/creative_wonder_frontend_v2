@@ -2,7 +2,7 @@
     "name": "creative_wonder_frontend_v2",
     "version": "0.1.0",
     "engines": {
-        "node": "6.11.4"
+        "node": "10.15.3"
     },
     "private": true,
     "dependencies": {
