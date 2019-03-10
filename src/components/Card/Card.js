@@ -4,14 +4,19 @@ import './Card.css';
 
 class Card extends Component {
 
-  lazyLoad(target) {
+  lazyLoad(target, type) {
     const io = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const img = entry.target;
-          const src = img.getAttribute('data-src');
+          const tgt = entry.target;
+          const src = tgt.getAttribute('data-src');
 
-          img.setAttribute('src', src);
+          if (type === 'img') {
+            tgt.setAttribute('src', src);
+
+          } if (type === 'div') {
+            tgt.style.backgroundImage = `url(${src})`;
+          }
           observer.disconnect();
         }
       })
@@ -41,7 +46,7 @@ class Card extends Component {
       return(
         <div className="card">
           <div className="card__image__container">
-            <div className="card__image" style={{  backgroundImage: "url(" + this.props.imgUrl + ")" }}>
+            <div className="card__image" data-src={this.props.imgUrl}>
               <div className="card__overlay">
                 <Button isSmall>Read More</Button>
               </div>
@@ -61,8 +66,15 @@ class Card extends Component {
   }
 
   componentDidMount() {
-    const targets = document.querySelectorAll('.card__blog__image');
-    targets.forEach(this.lazyLoad);
+    const imgTargets = document.querySelectorAll('.card__blog__image');
+    const divTargets = document.querySelectorAll('.card__image');
+    
+    imgTargets.forEach((elm) => {
+      this.lazyLoad(elm, 'img');
+    });
+    divTargets.forEach((elm) => {
+      this.lazyLoad(elm, 'div');
+    });
   }
 
   render() {
