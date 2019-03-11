@@ -10,7 +10,7 @@
 */
 
 .hero {
-	background-image: url('../../assets/images/large-hero--small.jpg');
+	background-image: url('https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--small.jpg');
 	border-image: url('../../assets/images/large-hero__border.png') 0 0 7 fill;
 	border-image-repeat: repeat repeat;
 	border-width: 0 0 7px;
@@ -19,11 +19,11 @@
 
 	@include tablet {
 		height: 600px;
-		background-image: url('../../assets/images/large-hero--medium.jpg');
+		background-image: url('https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--medium.jpg');
 	}
 
 	@include desktop {
-		background-image: url('../../assets/images/large-hero--large.jpg');
+		background-image: url('https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--large.jpg');
 		margin-top: 80px;
 	}
 
