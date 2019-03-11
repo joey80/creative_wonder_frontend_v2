@@ -4,14 +4,29 @@ import '../../components/Global/Global.css';
 import Title from '../../components/Title/Title';
 import Card from '../../components/Card/Card';
 import './Chalkboard.css';
+import { lazyLoad } from '../../util/LazyLoad';
 
 class Chalkboard extends Component {
+
+  componentDidMount() {
+    const divTargets = document.querySelectorAll('.chalkboard');
+
+    divTargets.forEach((elm) => {
+      lazyLoad(elm, 'div');
+      lazyLoad(elm, 'border');
+    });
+  }
+
   render() {
     return (
-      <section className="chalkboard">
+      <section
+        className="chalkboard"
+        data-src="https://res.cloudinary.com/hwzdnifrp/image/upload/v1552263074/chalkboard__bg.jpg"
+        border-src="https://res.cloudinary.com/hwzdnifrp/image/upload/q_25/v1552263824/chalkboard__wood.png">
         <div className="chalkboard__container">
           <Title isLight>Communication Board</Title>
-          <div className="chalkboard__card__container">
+          <div
+            className="chalkboard__card__container">
             <Card
               imgUrl = {"https://res.cloudinary.com/hwzdnifrp/image/upload/v1552178360/card__image__bg--one.jpg"}
               title = {"Back To School Night!"}

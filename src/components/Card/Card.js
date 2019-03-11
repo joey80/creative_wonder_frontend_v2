@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
 import './Card.css';
-import 'intersection-observer';
 import { lazyLoad } from '../../util/LazyLoad';
 
 class Card extends Component {
