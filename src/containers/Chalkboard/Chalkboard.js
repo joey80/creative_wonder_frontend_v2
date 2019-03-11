@@ -22,7 +22,7 @@ class Chalkboard extends Component {
       <section
         className="chalkboard"
         data-src="https://res.cloudinary.com/hwzdnifrp/image/upload/v1552263074/chalkboard__bg.jpg"
-        border-src="https://res.cloudinary.com/hwzdnifrp/image/upload/q_25/v1552263824/chalkboard__wood.png">
+        border-src="https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267345/chalkboard__wood.png">
         <div className="chalkboard__container">
           <Title isLight>Communication Board</Title>
           <div
