@@ -6,7 +6,7 @@
 
 */
 .hero {
-  background-image: url("../../assets/images/large-hero--small.jpg");
+  background-image: url("https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--small.jpg");
   border-image: url("../../assets/images/large-hero__border.png") 0 0 7 fill;
   border-image-repeat: repeat repeat;
   border-width: 0 0 7px;
@@ -15,10 +15,10 @@
   @media (min-width: 768px) {
     .hero {
       height: 600px;
-      background-image: url("../../assets/images/large-hero--medium.jpg"); } }
+      background-image: url("https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--medium.jpg"); } }
   @media (min-width: 1025px) {
     .hero {
-      background-image: url("../../assets/images/large-hero--large.jpg");
+      background-image: url("https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--large.jpg");
       margin-top: 80px; } }
   .hero__about {
     background-image: url("../../assets/images/about__hero--small.jpg");
