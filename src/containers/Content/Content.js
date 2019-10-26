@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
-import './Content.css';
-import Intro from '../Intro/Intro';
-import Cards from '../Cards/Cards';
-import Blog from '../Blog/Blog';
-import FAQ from '../FAQ/FAQ';
+import React, { Fragment } from 'react'
+import Intro from '../Intro/Intro'
+import Cards from '../Cards/Cards'
+import Blog from '../Blog/Blog'
+import FAQ from '../FAQ/FAQ'
+import './Content.scss'
 
-class Content extends Component {
-  render() {
-    return (
-      <div>
-        <Intro />
-        <Cards />
-        <Blog />
-        <FAQ />
-      </div>
-    );
-  }
-}
+const Content = props => (
+  <Fragment>
+    <Intro />
+    <Cards />
+    <Blog />
+    <FAQ />
+  </Fragment>
+)
 
-export default Content;
+export default Content

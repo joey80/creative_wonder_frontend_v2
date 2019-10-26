@@ -5,56 +5,48 @@
 // ==========================================================================
 
 */
-.intro {
-  display: inline-block;
-  margin: 10px auto 0 auto;
-  width: 100%;
-  padding: .5rem; }
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%; }
   @media (min-width: 768px) {
-    .intro {
-      margin: 0px auto 0 auto;
-      padding: 0; } }
+    .intro__container {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 117rem; } }
+
+.intro__content {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 0.5rem;
+  margin: 4rem auto; }
+  @media (min-width: 768px) {
+    .intro__content {
+      flex-grow: 1;
+      margin-top: 0; } }
   @media (min-width: 1025px) {
-    .intro {
-      margin: -200px auto 0 auto; } }
-  .intro__container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 100%; }
-    @media (min-width: 768px) {
-      .intro__container {
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 1170px; } }
-  .intro__content {
-    font-size: 1em;
-    line-height: 1.7em;
-    padding: 0.5rem;
-    margin: 40px auto; }
-    @media (min-width: 768px) {
-      .intro__content {
-        flex-grow: 1;
-        margin-top: 0; } }
-    @media (min-width: 1025px) {
-      .intro__content {
-        font-size: 1.1em;
-        line-height: 1.6em; } }
-    .intro__content p {
-      margin-top: 0; }
-  .intro__video {
-    flex-grow: 1;
-    min-width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .intro__video {
-        min-width: 50%; } }
-  .intro__video iframe {
-    vertical-align: top;
-    border: 0;
-    height: 300px;
-    min-width: 100%; }
-    @media (min-width: 768px) {
-      .intro__video iframe {
-        min-width: 90%; } }
+    .intro__content {
+      font-size: 1.1rem;
+      line-height: 1.6rem; } }
+  .intro__content p {
+    margin-top: 0; }
+
+.intro__video {
+  flex-grow: 1;
+  min-width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .intro__video {
+      min-width: 50%; } }
+
+.intro__video iframe {
+  vertical-align: top;
+  border: 0;
+  height: 30rem;
+  min-width: 100%;
+  padding-bottom: 3rem; }
+  @media (min-width: 768px) {
+    .intro__video iframe {
+      min-width: 90%; } }
