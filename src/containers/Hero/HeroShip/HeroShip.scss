@@ -1,0 +1,28 @@
+@import '../../../components/Global/Variables.scss';
+@import '../../../components/Global/Mixins.scss';
+
+.hero-ship {
+  width: 314px;
+  height: 153px;
+  background-image: url('../../../assets/images/large-hero__rocket--small@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(80px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @include tablet {
+    width: 446px;
+    height: 188px;
+    background-image: url('../../../assets/images/large-hero__rocket--medium@2x.png');
+    transform: translateY(100px);
+  }
+
+  @include desktop {
+    width: 560px;
+    height: 267px;
+    background-image: url('../../../assets/images/large-hero__rocket--large@2x.png');
+    transform: translateY(150px);
+  }
+}
