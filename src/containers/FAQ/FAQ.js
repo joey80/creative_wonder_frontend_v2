@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../../components/Title/Title';
 import Chalkboard from '../Chalkboard/Chalkboard';
 import FAQItem from '../../components/FAQItem/FAQItem';
-import { Data } from './FAQData';
+import { Data } from './FAQ.data';
 import './FAQ.scss';
 
 const FAQ = () => (

@@ -1,65 +1,59 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Button from '../Button/Button';
-import './Card.css';
 import { lazyLoad } from '../../util/LazyLoad';
+import './Card.scss';
 
-class Card extends Component {
+const Card = ({ blog, children, date, imgUrl, link, title }) => {
+  const blogImageRef = useRef(null);
+  const imageRef = useRef(null);
 
-  renderCard() {
-    if(this.props.blog) {
-      return(
-        <div className="card__blog">
-          <img data-src={this.props.imgUrl} alt={this.props.title} className="card__blog__image" />
-          <div className="card__blog__date">
-            {this.props.date}
-          </div>
-          <div className="card__blog__title">
-            {this.props.title}
-          </div>
-          <div className="card__blog__content">
-            {this.props.children}
-            <p><a href={this.props.link} className="card__blog__content__link">Read More . . . </a></p>
-          </div>
+  useEffect(() => {
+    if (blogImageRef && blogImageRef.current) {
+      lazyLoad(blogImageRef.current, 'img');
+    }
+
+    if (imageRef && imageRef.current) {
+      lazyLoad(imageRef.current, 'div');
+    }
+  });
+
+  if (blog) {
+    return (
+      <div className='card__blog'>
+        <img data-src={imgUrl} alt={title} ref={blogImageRef} className='card__blog__image' />
+        <div className='card__blog__date'>{date}</div>
+        <div className='card__blog__title'>{title}</div>
+        <div className='card__blog__content'>
+          {children}
+          <p>
+            <a href={link} className='card__blog__content__link'>
+              Read More . . .{' '}
+            </a>
+          </p>
         </div>
-      );
-    } else {
-      return(
-        <div className="card">
-          <div className="card__image__container">
-            <div className="card__image" data-src={this.props.imgUrl}>
-              <div className="card__overlay">
-                <Button isSmall>Read More</Button>
-              </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className='card'>
+        <div className='card__image__container'>
+          <div className='card__image' ref={imageRef} data-src={imgUrl}>
+            <div className='card__overlay'>
+              <Button isSmall>Read More</Button>
             </div>
           </div>
-          <div className="card__title">
-            {this.props.title}
-          </div>
-          <hr />
-          <div className="card__content">
-            <p>{this.props.children}</p>
-            <p><a href={this.props.link}>Read More . . . </a></p>
-          </div>
         </div>
-      );
-    }
+        <div className='card__title'>{title}</div>
+        <hr />
+        <div className='card__content'>
+          <p>{children}</p>
+          <p>
+            <a href={link}>Read More . . . </a>
+          </p>
+        </div>
+      </div>
+    );
   }
-
-  componentDidMount() {
-    const imgTargets = document.querySelectorAll('.card__blog__image');
-    const divTargets = document.querySelectorAll('.card__image');
-    
-    imgTargets.forEach((elm) => {
-      lazyLoad(elm, 'img');
-    });
-    divTargets.forEach((elm) => {
-      lazyLoad(elm, 'div');
-    });
-  }
-
-  render() {
-    return this.renderCard();
-  }
-}
+};
 
 export default Card;
