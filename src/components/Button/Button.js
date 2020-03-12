@@ -1,36 +1,34 @@
-import React, { Component } from 'react';
-import './Button.css';
+import React from 'react';
+import './Button.scss';
 
-class Button extends Component {
-
-  renderButton() {
-    if(this.props.isNavButton) {
-      return(
-        <div className="button__header__container">
-          <button className={`button__header button__header--${this.props.isMenuOpen ? "on" : "off"}`} onClick={this.props.onClick}>
-            <span className="button__header__text">{this.props.children}</span>
-            <span className="button__header__hamburger" onClick={this.props.onClick}></span>
-          </button>
-        </div>
-      );
-    } else if (this.props.isSmall) {
-      return(
-        <button className="button button--small" onClick={this.props.onClick}>
-          {this.props.children}
+const Button = ({ children, isMenuOpen, isNavButton, isSmall, onClick }) => {
+  if (isNavButton) {
+    return (
+      <div className='button__header__container'>
+        <button
+          className={`button__header button__header--${isMenuOpen ? 'on' : 'off'}`}
+          onClick={onClick}
+        >
+          <span className='button__header__text'>{children}</span>
+          <span className='button__header__hamburger' onClick={onClick}></span>
         </button>
-      );
-    } else {
-      return(
-        <button className="button" onClick={this.props.onClick}>
-          {this.props.children}
-        </button>
-      );
-    }
+      </div>
+    );
   }
 
-  render() {
-    return this.renderButton();
+  if (isSmall) {
+    return (
+      <button className='button button--small' onClick={onClick}>
+        {children}
+      </button>
+    );
   }
-}
+
+  return (
+    <button className='button' onClick={onClick}>
+      {children}
+    </button>
+  );
+};
 
 export default Button;
