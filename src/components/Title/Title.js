@@ -1,31 +1,10 @@
-import React, { Component } from 'react';
-import './Title.css';
+import React from 'react';
+import './Title.scss';
 
-class Title extends Component {
-
-  renderTitle() {
-    if(this.props.isLight) {
-      return(
-        <div className="title__container">
-            <div className="title--light">
-            {this.props.children}
-            </div>
-        </div>
-      );
-    } else {
-      return(
-        <div className="title__container">
-            <div className="title">
-            {this.props.children}
-            </div>
-        </div>
-      );
-    }
-  }
-
-  render() {
-    return this.renderTitle();
-  }
-}
+const Title = ({ children, isLight }) => (
+  <div className='title__container'>
+    <div className={isLight ? 'title--light' : 'title'}>{children}</div>
+  </div>
+);
 
 export default Title;
