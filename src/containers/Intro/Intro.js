@@ -1,8 +1,8 @@
-import React from 'react'
-import Title from '../../components/Title/Title'
-import './Intro.css'
+import React from 'react';
+import Title from '../../components/Title/Title';
+import './Intro.css';
 
-const Intro = props => (
+const Intro = () => (
   <section className='container intro'>
     <div className='row'>
       <div className='col-12'>
@@ -37,6 +37,6 @@ const Intro = props => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Intro
+export default Intro;
