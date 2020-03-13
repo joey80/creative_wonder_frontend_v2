@@ -1,78 +1,53 @@
-import React, { Component } from 'react';
-import './Header.css';
+import React, { useEffect, useState } from 'react';
 import Nav from '../../components/Nav/Nav';
 import Button from '../../components/Button/Button';
+import './Header.scss';
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleMenu = this.toggleMenu.bind(this);
-    this.closeMenuOnScroll = this.closeMenuOnScroll.bind(this);
-    this.state = {
-      menuOpen: false,
-      showLinks: false,
-      isMobile: false
-    }
-  }
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showLinks, setShowLinks] = useState(false);
 
-  // Controls the nav menu
-  toggleMenu() {
-    const menuState = this.state.menuOpen;
-
-    if(menuState) {
-      // Hide the links then hide the nav menu
+  const toggleMenu = () => {
+    if (menuOpen) {
       setTimeout(() => {
-        this.setState({ menuOpen: !menuState });
+        setMenuOpen(false);
       }, 150);
-      this.setState({ showLinks: !menuState });
+      setShowLinks(false);
     } else {
-      // Show the nav menu then show the links
       setTimeout(() => {
-        this.setState({ showLinks: !menuState });
+        setShowLinks(true);
       }, 300);
-      this.setState({ menuOpen: !menuState });
+      setMenuOpen(true);
     }
-  }
+  };
 
-  // Closes the nav menu when user starts to scroll
-  closeMenuOnScroll() {
-    const menuState = this.state.menuOpen;
-
-    if(menuState) {
-      // Hide the links then hide the nav menu
+  const closeMenuOnScroll = () => {
+    if (menuOpen) {
       setTimeout(() => {
-        this.setState({ menuOpen: false });
+        setMenuOpen(false);
       }, 150);
-      this.setState({ showLinks: false });
-    } else {
-      return;
+      setShowLinks(false);
     }
+    return null;
+  };
 
-  }
+  useEffect(() => {
+    window.addEventListener('scroll', closeMenuOnScroll);
+  });
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.closeMenuOnScroll);
-  }
-
-
-  render() {
-    return (
-      <div className="header__section">
-        <div className="header">
-          <div className="header__container">
-            <div className="header__logo"></div>
-            <Button onClick={this.toggleMenu}
-                    isNavButton={true}
-                    isMenuOpen={this.state.menuOpen}>
-              Main Menu
-            </Button>
-          </div>
+  return (
+    <div className='header__section'>
+      <div className='header'>
+        <div className='header__container'>
+          <div className='header__logo'></div>
+          <Button onClick={toggleMenu} isNavButton={true} isMenuOpen={menuOpen}>
+            Main Menu
+          </Button>
         </div>
-        <Nav isMenuOpen={this.state.menuOpen}
-             areLinksVisible={this.state.showLinks} />
       </div>
-    );
-  }
-}
+      <Nav isMenuOpen={menuOpen} areLinksVisible={showLinks} />
+    </div>
+  );
+};
 
 export default Header;

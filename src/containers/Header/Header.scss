@@ -10,53 +10,52 @@
 */
 
 .header {
-	position: fixed;
+  position: fixed;
   top: 0;
- 	background-color: $primaryRedColor;
- 	height: 80px;
- 	width: 100%;
-	color: #fff;
-	z-index: 3;
+  background-color: $primaryRedColor;
+  height: 80px;
+  width: 100%;
+  color: #fff;
+  z-index: 3;
 
-	&__section {
-		position: relative;
-	}
+  &__section {
+    position: relative;
+  }
 
-    &__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 10px 0 10px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
     margin: 0 auto;
     height: inherit;
     max-width: 100%;
 
     @include tablet {
-			max-width: 1170px;
-		}
-		
-		@include desktop {
-			padding: 0;
-		}
+      max-width: 1170px;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
   }
 
   &__logo {
-		background-image: url('../../assets/images/logo.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		width: 280px;
-		height: 61px;
+    background-image: url('../../assets/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 280px;
+    height: 61px;
 
-		@include tablet {
-			width: 340px;
-			height: 74px;
-		}
+    @include tablet {
+      width: 340px;
+      height: 74px;
+    }
 
-		@include desktop {
-			width: 349px;
-			height: 76px;
-		}
-	}
-	
+    @include desktop {
+      width: 349px;
+      height: 76px;
+    }
+  }
 }
