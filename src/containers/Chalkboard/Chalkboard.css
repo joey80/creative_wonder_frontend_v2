@@ -11,6 +11,7 @@
   border-image-width: 15px 0 15px 0;
   border-image-outset: 0 0 0 0;
   border-image-repeat: repeat repeat;
+  border-style: solid;
   background-attachment: fixed;
   padding-top: 80px;
   padding-bottom: 80px; }
@@ -63,6 +64,6 @@
       color: #fff;
       padding: 10px;
       font-size: 0.8em;
-      transition: all .2s linear;
+      transition: all 0.2s linear;
       max-height: 0;
       overflow: hidden; }
