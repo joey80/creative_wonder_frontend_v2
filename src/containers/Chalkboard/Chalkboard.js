@@ -1,32 +1,25 @@
-import React, { Component } from 'react';
-import 'font-awesome/css/font-awesome.min.css';
-import '../../components/Global/Global.css';
-import './Chalkboard.css';
+import React, { useEffect, useRef } from 'react';
 import { lazyLoad } from '../../util/LazyLoad';
+import './Chalkboard.scss';
 
-class Chalkboard extends Component {
+const Chalkboard = ({ children }) => {
+  const chalkboardRef = useRef(null);
 
-  componentDidMount() {
-    const divTargets = document.querySelectorAll('.chalkboard');
+  useEffect(() => {
+    lazyLoad(chalkboardRef.current, 'div');
+    lazyLoad(chalkboardRef.current, 'border');
+  });
 
-    divTargets.forEach((elm) => {
-      lazyLoad(elm, 'div');
-      lazyLoad(elm, 'border');
-    });
-  }
-
-  render() {
-    return (
-      <section
-        className="chalkboard"
-        data-src="https://res.cloudinary.com/hwzdnifrp/image/upload/v1552263074/chalkboard__bg.jpg"
-        border-src="https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267905/chalkboard__wood.jpg">
-        <div className="chalkboard__container">
-          {this.props.children}
-        </div>
-      </section>
-    );
-  }
-}
+  return (
+    <section
+      ref={chalkboardRef}
+      className='chalkboard'
+      data-src='https://res.cloudinary.com/hwzdnifrp/image/upload/v1552263074/chalkboard__bg.jpg'
+      border-src='https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267905/chalkboard__wood.jpg'
+    >
+      <div className='chalkboard__container'>{children}</div>
+    </section>
+  );
+};
 
 export default Chalkboard;
