@@ -1,9 +1,9 @@
-import React from 'react'
-import Button from '../../components/Button/Button'
-import HeroShip from './HeroShip/HeroShip'
-import './Hero.scss'
+import React from 'react';
+import Button from '../../components/Button/Button';
+import HeroShip from './HeroShip/HeroShip';
+import './Hero.scss';
 
-const Hero = props => (
+const Hero = () => (
   <section className='hero'>
     <div className='container'>
       <div className='row'>
@@ -24,6 +24,6 @@ const Hero = props => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Hero
+export default Hero;

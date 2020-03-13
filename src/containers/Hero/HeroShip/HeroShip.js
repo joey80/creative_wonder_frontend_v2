@@ -1,6 +1,6 @@
-import React from 'react'
-import './HeroShip.scss'
+import React from 'react';
+import './HeroShip.scss';
 
-const HeroShip = props => <div className='hero-ship' />
+const HeroShip = () => <div className='hero-ship' />;
 
-export default HeroShip
+export default HeroShip;
