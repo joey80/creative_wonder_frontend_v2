@@ -1,10 +1,15 @@
 {
   "name": "creative_wonder_frontend_v2",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "engines": {
-    "node": "10.15.3"
+    "node": "12.16.3"
   },
   "private": true,
+  "release": {
+    "branches": [
+      "release"
+    ]
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
@@ -29,12 +34,12 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "heroku-postbuild": "npm run build"
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1"
+    "enzyme-adapter-react-16": "^1.15.1",
+    "semantic-release": "^17.0.7"
   },
   "browserslist": [
     ">0.2%",
