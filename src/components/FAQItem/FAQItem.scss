@@ -1,0 +1,12 @@
+.faq-item {
+  $this: &;
+
+  &__answer {
+    display: none;
+  }
+  &--show {
+    .faq-item__answer {
+      display: block;
+    }
+  }
+}
