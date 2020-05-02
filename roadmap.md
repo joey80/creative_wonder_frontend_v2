@@ -6,3 +6,6 @@
 ## 1.1 - epic/faqs
 
 - add faq components
+- DONE - add color for faq question
+- DONE - add toggle for faq question
+- add toggle animations
