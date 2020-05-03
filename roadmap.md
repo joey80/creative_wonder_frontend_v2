@@ -5,12 +5,4 @@
 
 ## 1.1 - epic/faqs
 
-- DONE - add faq components
-- DONE - add faq stylings
-- DONE - add color for faq question
-- DONE - add toggle for faq question
-- DONE - add toggle animations
-
-## 1.1 - epic/footer
-
-- add footer component
+- add faq components
