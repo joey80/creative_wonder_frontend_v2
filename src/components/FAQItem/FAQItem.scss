@@ -1,12 +1,65 @@
 .faq-item {
-  $this: &;
-
   &__answer {
-    display: none;
+    color: #fff;
+    display: block;
+    height: 0;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &__text {
+      line-height: 1.4;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    &--open {
+      height: 170px;
+      transition: all 0.3s ease-in-out;
+    }
   }
-  &--show {
-    .faq-item__answer {
-      display: block;
+
+  &__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__question {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    user-select: none;
+
+    &--1 {
+      background-color: #e33b43;
+      color: #010242;
+    }
+
+    &--2 {
+      background-color: #2ef2f2;
+      color: #153798;
+    }
+
+    &--3 {
+      background-color: #b6ec64;
+      color: #570aa9;
+    }
+
+    &--4 {
+      background-color: #f2a341;
+      color: #780c36;
+    }
+
+    &--5 {
+      background-color: #c37cf5;
+      color: #1e2886;
     }
   }
 }
