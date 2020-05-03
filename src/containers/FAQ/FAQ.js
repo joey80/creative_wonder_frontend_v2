@@ -9,7 +9,7 @@ const FAQ = () => (
   <Chalkboard>
     <Title isLight>Frequently Asked Questions</Title>
     {Data.map(({ answer, color, question }, idx) => (
-      <FAQItem answer={answer} num={idx + 1} question={question} key={idx} />
+      <FAQItem answer={answer} color={color} question={question} key={idx} />
     ))}
   </Chalkboard>
 );
