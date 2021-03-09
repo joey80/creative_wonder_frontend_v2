@@ -6,7 +6,7 @@
 
 */
 .hero {
-  background-image: url("https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--small.jpg");
+  background-image: url("../../assets/images/large-hero--small.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-image: url("../../assets/images/large-hero__border.png") 0 0 7 fill;
@@ -21,7 +21,7 @@
   margin-top: 80px; }
   @media (min-width: 768px) {
     .hero {
-      background-image: url("https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--medium.jpg"); } }
+      background-image: url("../../assets/images/large-hero--medium.jpg"); } }
   @media (min-width: 1025px) {
     .hero {
-      background-image: url("https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267225/large-hero--large.jpg"); } }
+      background-image: url("../../assets/images/large-hero--large.jpg"); } }
