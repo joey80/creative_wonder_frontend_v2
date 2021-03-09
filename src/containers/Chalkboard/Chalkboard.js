@@ -14,7 +14,7 @@ const Chalkboard = ({ children }) => {
     <section
       ref={chalkboardRef}
       className='chalkboard'
-      data-src='https://res.cloudinary.com/hwzdnifrp/image/upload/v1552263074/chalkboard__bg.jpg'
+      data-src={require('../../assets/images/chalkboard__bg.jpg')}
       border-src='https://res.cloudinary.com/hwzdnifrp/image/upload/v1552267905/chalkboard__wood.jpg'
     >
       <div className='chalkboard__container'>{children}</div>

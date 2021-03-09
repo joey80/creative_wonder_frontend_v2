@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './FAQItem.scss';
 
 const FAQItem = ({ answer, num, question }) => {
