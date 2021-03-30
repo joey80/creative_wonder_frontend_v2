@@ -10,20 +10,6 @@
 */
 
 .intro {
-  //   display: inline-block;
-  //   margin: 1rem auto 0 auto;
-  //   width: 100%;
-  //   padding: 0.5rem;
-
-  //   @include tablet {
-  //     margin: 0 auto;
-  //     padding: 0;
-  //   }
-
-  //   @include desktop {
-  //     margin: -20rem auto 0 auto;
-  //   }
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -49,8 +35,8 @@
     }
 
     @include desktop {
-      font-size: 1.1rem;
-      line-height: 1.6rem;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
     }
 
     & p {

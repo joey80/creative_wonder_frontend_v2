@@ -9,7 +9,7 @@ const Blog = () => (
     <Title>Latest News</Title>
     <div className='blog__container'>
       {Data.map(({ date, description, imageLink, link, title }, idx) => (
-        <Card key={idx} blog imgUrl={imageLink} title={title} date={date} link={link}>
+        <Card key={idx} blog imgUrl={imageLink.default} title={title} date={date} link={link}>
           {description}
         </Card>
       ))}
