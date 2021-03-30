@@ -49,8 +49,8 @@
         cursor: pointer;
         background-color: #e33b43;
         padding: 7px;
-        font-size: .85rem;
-        border: 1px solid rgba(230, 230, 230, 0.3);
+        font-size: 0.85rem;
+        border: 1px solid rgba(230, 230, 230, 0.5);
         height: 44px;
         width: 181px; } }
     .button__header__container {
@@ -88,7 +88,7 @@
       @media (min-width: 768px) {
         .button__header--on:after {
           font-family: FontAwesome;
-          font-size: .9em;
+          font-size: 0.9em;
           font-weight: normal;
           font-style: normal;
           display: inline-block;
@@ -100,7 +100,7 @@
       @media (min-width: 768px) {
         .button__header--off:after {
           font-family: FontAwesome;
-          font-size: .9em;
+          font-size: 0.9em;
           font-weight: normal;
           font-style: normal;
           display: inline-block;

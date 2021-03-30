@@ -10,149 +10,143 @@
 */
 
 .button {
-	font-family: 'PT Sans Narrow', sans-serif;
-	font-size: 1rem;
-	display: inline-block;
-	margin: 10px;
-	padding: 7px 20px;
-	cursor: pointer;
-	text-decoration: none;
-	color: #fff;
-	border: 1px solid $primaryRedColor;
-	background-color: #d91122;
-	border-radius: 4px;
-	box-shadow: inset 0 35px 15px rgba(227, 59, 67, 0.9);
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 10px;
+  padding: 7px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid $primaryRedColor;
+  background-color: #d91122;
+  border-radius: 4px;
+  box-shadow: inset 0 35px 15px rgba(227, 59, 67, 0.9);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s linear;
+
+  @include tablet {
+    font-size: 1.2rem;
+    padding: 14px 40px;
+  }
+
+  &:hover {
+    color: #d91122;
+    border: 1px solid rgba(72, 72, 72, 0.3);
+    background-color: #fff;
+    box-shadow: none;
+    text-shadow: none;
     transition: all 0.2s linear;
-    
+  }
+
+  &:focus {
+    outline: 1px dotted #fff;
+  }
+
+  &--large {
+    font-size: 1.1em;
+  }
+
+  &--small {
+    font-size: 0.9rem;
+    padding: 7px 20px;
+
     @include tablet {
-        font-size: 1.2rem;
-        padding: 14px 40px;
     }
 
-	&:hover {
-		color: #d91122;
-		border: 1px solid rgba(72, 72, 72, 0.3);
-		background-color: #fff;
-		box-shadow: none;
-		text-shadow: none;
-		transition: all 0.2s linear;
-	}
-
-	&:focus {
-		outline: 1px dotted #fff;
-	}
-
-	&--large {
-		font-size: 1.1em;
-	}
-
-	&--small {
-        font-size: 0.9rem;
-		padding: 7px 20px;
-
-		@include tablet {
-
-		}
-
-		@include desktop {
-
-		}
-
+    @include desktop {
     }
-    
-    &__header {
-        background-color: transparent;
-        color: #fff;
-        border: 0;
+  }
 
-        @include tablet {
-            display: block;
-            font-family: 'Lato', sans-serif;
-            cursor: pointer;
-            background-color: $primaryRedColor;
-            padding: 7px;
-            font-size: .85rem;
-            border: 1px solid rgba(230, 230, 230, 0.3);
-            height: 44px;
-            width: 181px;
-        }
+  &__header {
+    background-color: transparent;
+    color: #fff;
+    border: 0;
 
-        &__container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &:focus {
-            outline: none;
-
-            @include tablet {
-                outline: 1px dotted #fff;
-            }
-        }
-
-        &:hover {
-
-            @include tablet {
-                color: #d91122;
-                border-color: #fff;
-                background-color: #fff;
-            }
-        }
-
-        &__text {
-            display: none;
-
-            @include tablet {
-                display: inline-block;
-            }
-        }
-
-        &__hamburger:after {
-            display: inline-block;
-            font-family: FontAwesome;
-            font-size: 1.4rem;
-            content: '\f0c9';
-            font-weight: normal;
-            font-style: normal;
-            text-decoration: inherit;
-
-            @include tablet {
-                display: none;
-            }
-        }
-
-        &--on:after {
-            display: none;
-
-            @include tablet {
-                font-family: FontAwesome;
-                font-size: .9em;
-                font-weight: normal;
-                font-style: normal;
-                display: inline-block;
-                padding-left: 6px;
-                content: '\f077';
-                text-decoration: inherit;
-            }
-            
-        }
-
-        &--off:after {
-            display: none;
-
-            @include tablet {
-                font-family: FontAwesome;
-                font-size: .9em;
-                font-weight: normal;
-                font-style: normal;
-                display: inline-block;
-                padding-left: 6px;
-                content: '\f078';
-                text-decoration: inherit;
-            }
-            
-        }
+    @include tablet {
+      display: block;
+      font-family: 'Lato', sans-serif;
+      cursor: pointer;
+      background-color: $primaryRedColor;
+      padding: 7px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(230, 230, 230, 0.5);
+      height: 44px;
+      width: 181px;
     }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:focus {
+      outline: none;
+
+      @include tablet {
+        outline: 1px dotted #fff;
+      }
+    }
+
+    &:hover {
+      @include tablet {
+        color: #d91122;
+        border-color: #fff;
+        background-color: #fff;
+      }
+    }
+
+    &__text {
+      display: none;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+
+    &__hamburger:after {
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 1.4rem;
+      content: '\f0c9';
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--on:after {
+      display: none;
+
+      @include tablet {
+        font-family: FontAwesome;
+        font-size: 0.9em;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        padding-left: 6px;
+        content: '\f077';
+        text-decoration: inherit;
+      }
+    }
+
+    &--off:after {
+      display: none;
+
+      @include tablet {
+        font-family: FontAwesome;
+        font-size: 0.9em;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        padding-left: 6px;
+        content: '\f078';
+        text-decoration: inherit;
+      }
+    }
+  }
 }
