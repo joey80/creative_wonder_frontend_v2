@@ -10,7 +10,7 @@
   margin: 0 auto 1rem auto;
   background-color: #fff;
   height: 400px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   box-shadow: 0 14px 28px rgba(10, 10, 10, 0);
   border: 2px solid transparent;
   width: 100%; }
@@ -40,7 +40,7 @@
     text-align: center;
     transform: scale(1.1);
     background-size: cover;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     overflow: hidden; }
     .card__image__container {
       width: 100%;
@@ -49,7 +49,7 @@
   .card__overlay {
     opacity: 0;
     background: rgba(255, 255, 255, 0.6);
-    transition: all .2s linear; }
+    transition: all 0.2s linear; }
     .card__overlay > button {
       transform: translateY(10px);
       transition: all 0.3s ease-in-out; }
@@ -62,7 +62,8 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
   .card:hover {
     box-shadow: 0 14px 28px #0a0a0a, 0 10px 10px rgba(10, 10, 10, 0.22);
-    transition: all .2s ease-in-out; }
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; }
   .card:hover .card__overlay {
     opacity: 1; }
     .card:hover .card__overlay > button {

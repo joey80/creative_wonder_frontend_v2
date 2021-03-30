@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import './FAQItem.scss';
 
@@ -13,7 +12,7 @@ const FAQItem = ({ answer, num, question }) => {
     <div className='faq-item__container' ref={faqRef} onClick={handleClick}>
       <span className={`faq-item__question faq-item__question--${num}`}>{question}</span>
       <span className='faq-item__answer'>
-        <p class='faq-item__answer__text'>{answer}</p>
+        <p className='faq-item__answer__text'>{answer}</p>
       </span>
     </div>
   );

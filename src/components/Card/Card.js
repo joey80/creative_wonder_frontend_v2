@@ -37,7 +37,7 @@ const Card = ({ blog, children, date, imgUrl, link, title }) => {
     return (
       <div className='card'>
         <div className='card__image__container'>
-          <div className='card__image' ref={imageRef} data-src={imgUrl}>
+          <div className='card__image' ref={imageRef} data-src={imgUrl.default}>
             <div className='card__overlay'>
               <Button isSmall>Read More</Button>
             </div>
