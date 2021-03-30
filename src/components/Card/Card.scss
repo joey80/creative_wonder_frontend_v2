@@ -10,180 +10,186 @@
 */
 
 .card {
-	position: relative;
-	margin: 0 auto 1rem auto;
-	background-color: #fff;
-	height: 400px;
-	transition: all .2s ease-in-out;
-	box-shadow: 0 14px 28px rgba(10, 10, 10, 0);
-	border: 2px solid transparent;
-	width: 100%;
+  position: relative;
+  margin: 0 auto 1rem auto;
+  background-color: #fff;
+  height: 400px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 14px 28px rgba(10, 10, 10, 0);
+  border: 2px solid transparent;
+  width: 100%;
 
-	@include desktop {
-		max-width: 350px;
-	}
+  @include desktop {
+    max-width: 350px;
+  }
 
-	&__title {
-		display: inline-block;
-		font-weight: 600;
-		font-size: 1.3rem;
-		padding: 1rem;
-		text-transform: uppercase;
-	}
+  &__title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
 
-	&__content {
-		margin: 0;
-		padding: 0 1.2rem;
-		font-size: 0.85rem;
+  &__content {
+    margin: 0;
+    padding: 0 1.2rem;
+    font-size: 0.85rem;
 
-		@include tablet {
-			font-size: 1rem;
-		}
+    @include tablet {
+      font-size: 1rem;
+    }
 
-		& a {
-			position: absolute;
-			bottom: 10px;
-		}
-	}
+    & a {
+      position: absolute;
+      bottom: 10px;
+    }
+  }
 
-	&__image {
-		line-height: 150px;
-		width: 100%;
-		height: 150px;
-		text-align: center;
-		transform: scale(1.1);
-		background-size: cover;
-		transition: all .2s ease;
-		overflow: hidden;
+  &__image {
+    line-height: 150px;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    transform: scale(1.1);
+    background-size: cover;
+    transition: all 0.2s ease;
+    overflow: hidden;
 
-		&__container {
-			width: 100%;
-			height: 150px;
-			overflow: hidden;
-		}
-	}
+    &__container {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+    }
+  }
 
-	&__overlay {
-		opacity: 0;
-		background: rgba(255,255,255,.6);
-		transition: all .2s linear;
+  &__overlay {
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s linear;
 
-		& > button {
-			transform: translateY(10px);
-			transition: all 0.3s ease-in-out;
-		}
-	}
+    & > button {
+      transform: translateY(10px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 
-	& hr {
-		border: 0;
-		padding: 0;
-		margin: 0;
-		opacity: 0.6;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
+  & hr {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0.6;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0)
+    );
+  }
 
-	&:hover {
-		box-shadow: 0 14px 28px rgba(10, 10, 10, 1), 0 10px 10px rgba(10, 10, 10, 0.22);
-		transition: all .2s ease-in-out;
-	}
+  &:hover {
+    box-shadow: 0 14px 28px rgba(10, 10, 10, 1), 0 10px 10px rgba(10, 10, 10, 0.22);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
 
-	&:hover .card__overlay {
-		opacity: 1;
+  &:hover .card__overlay {
+    opacity: 1;
 
-		& > button {
-			transform: translateY(0);
-			transition: all 0.3s ease-in-out;
-		}
-	}
+    & > button {
+      transform: translateY(0);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 
-	&:hover .card__image {
-		transform: scale(1);
-	}
+  &:hover .card__image {
+    transform: scale(1);
+  }
 
-	&__blog {
-		background-image: url("../../assets/images/blog__card__bg.png");
-		position: relative;
-		max-height: 450px;
-		padding: 18px;
-		width: 100%;
-		border-radius: 10px;
-		margin: 0 auto 1rem auto;
+  &__blog {
+    background-image: url('../../assets/images/blog__card__bg.png');
+    position: relative;
+    max-height: 450px;
+    padding: 18px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto 1rem auto;
 
-		@include desktop {
-			max-width: 48%;
-		}
+    @include desktop {
+      max-width: 48%;
+    }
 
-		&__content {
-			margin-top: 1rem;
-			padding-bottom: 1rem;
-			line-height: 1.5;
+    &__content {
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+      line-height: 1.5;
 
-			@include desktop {
-				line-height: 1.7rem;
-				font-size: 1.1rem;
-			}
+      @include desktop {
+        line-height: 1.7rem;
+        font-size: 1.1rem;
+      }
 
-			&__link {
-				position: absolute;
-				bottom: 10px;
-			}
-		}
-		
-		&__date {
-			font-size: 0.9rem;
-			font-weight: bold;
-			padding-top: 10px;
-			color: #d91122;
-			text-align: left;
+      &__link {
+        position: absolute;
+        bottom: 10px;
+      }
+    }
 
-			@include tablet {
-				padding: 10px 0 10px 0;
-				font-size: 1.2rem;
-			}
+    &__date {
+      font-size: 0.9rem;
+      font-weight: bold;
+      padding-top: 10px;
+      color: #d91122;
+      text-align: left;
 
-			@include desktop {
-				font-size: 1.4rem;
-			}
-		}
+      @include tablet {
+        padding: 10px 0 10px 0;
+        font-size: 1.2rem;
+      }
 
-		&__image {
-			float: left;
-			width: 150px;
-			height: 150px;
-			margin: 10px 30px 10px 10px;
-			border-radius: 50%;
-			border: 3px solid #fff;
-			overflow: hidden;
+      @include desktop {
+        font-size: 1.4rem;
+      }
+    }
 
-			@include tablet {
-				width: 140px;
-				height: 140px;
-			}
+    &__image {
+      float: left;
+      width: 150px;
+      height: 150px;
+      margin: 10px 30px 10px 10px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      overflow: hidden;
 
-			@include desktop {
-				width: 240px;
-				height: 240px;
-				margin: 10px;
-			}
-		}
+      @include tablet {
+        width: 140px;
+        height: 140px;
+      }
 
-		&__title {
-			font-size: 1.3rem;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #222;
-			text-align: left;
-			line-height: 1.3;
+      @include desktop {
+        width: 240px;
+        height: 240px;
+        margin: 10px;
+      }
+    }
 
-			@include tablet {
-				font-size: 1.2rem;
-			}
+    &__title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #222;
+      text-align: left;
+      line-height: 1.3;
 
-			@include desktop {
-				padding-top: 2px;
-				font-size: 1.6rem;
-			}
-		}
-	}
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include desktop {
+        padding-top: 2px;
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
