@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fontsource/homemade-apple": "^4.2.2",
+    "@fontsource/lato": "^4.2.2",
     "@fontsource/pt-sans-narrow": "^4.2.2",
     "bootstrap": "^4.6.0",
     "font-awesome": "^4.7.0",
