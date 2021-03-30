@@ -34,11 +34,11 @@
     "dev-js": "react-scripts start",
     "dev": "npm-run-all -p watch-css dev-js",
     "start": "serve -s build",
-    "build-js": "react-scripts build && react-snapshot",
-    "build": "npm-run-all build-css build-js",
+    "build": "npm-run-all build:css build:js",
+    "build:css": "node-sass-chokidar src/ -o src/",
+    "build:js": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
