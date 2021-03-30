@@ -694,7 +694,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'PT Sans Narrow';
   color: #444;
   background-color: #e2eff1;
   font-size: 18px;

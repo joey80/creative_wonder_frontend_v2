@@ -1,6 +1,6 @@
 import 'intersection-observer';
 
-export function lazyLoad(target, type) {
+const lazyLoad = (target, type) => {
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -28,6 +28,6 @@ export function lazyLoad(target, type) {
   });
 
   io.observe(target);
-}
+};
 
-export default lazyLoad;
+export { lazyLoad };
