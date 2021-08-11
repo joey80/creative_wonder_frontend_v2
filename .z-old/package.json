@@ -1,0 +1,54 @@
+{
+  "name": "creative_wonder_frontend_v2",
+  "version": "0.0.0-development",
+  "engines": {
+    "node": "12.16.3"
+  },
+  "private": true,
+  "release": {
+    "branches": [
+      "release"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joey80/creative_wonder_frontend_v2.git"
+  },
+  "dependencies": {
+    "@fontsource/homemade-apple": "^4.2.2",
+    "@fontsource/lato": "^4.2.2",
+    "@fontsource/pt-sans-narrow": "^4.2.2",
+    "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
+    "intersection-observer": "^0.12.0",
+    "node-sass-chokidar": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-scripts": "^4.0.3",
+    "serve": "^11.3.2"
+  },
+  "scripts": {
+    "dev-js": "react-scripts start",
+    "dev": "npm-run-all -p watch-css dev-js",
+    "start": "serve -s build",
+    "build": "npm-run-all build:css build:js",
+    "build:css": "node-sass-chokidar src/ -o src/",
+    "build:js": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "watch-css": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive"
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "semantic-release": "^17.4.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
