@@ -1,6 +1,8 @@
 .faq-item__answer {
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   display: block;
+  font-size: 1.2rem;
   height: 0;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -14,9 +16,14 @@
     transition: all 0.3s ease-in-out; }
 
 .faq-item__container {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border: 0;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
+  border-top-right-radius: 5px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%; }
   .faq-item__container:hover {
     cursor: pointer; }
 

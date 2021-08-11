@@ -7,10 +7,12 @@ import './FAQ.scss';
 
 const FAQ = () => (
   <Chalkboard>
-    <Title isLight>Frequently Asked Questions</Title>
-    {Data.map(({ answer, color, question }, idx) => (
-      <FAQItem answer={answer} num={idx + 1} question={question} key={idx} />
-    ))}
+    <Title isLight={true}>Frequently Asked Questions</Title>
+    <ul className='faq__list'>
+      {Data.map(({ answer, question }, index) => (
+        <FAQItem num={index + 1} key={index} {...{ answer, question }} />
+      ))}
+    </ul>
   </Chalkboard>
 );
 
