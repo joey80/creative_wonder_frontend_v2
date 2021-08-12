@@ -2,13 +2,13 @@ import React from 'react';
 import { ButtonType, NavButtonType } from './types';
 import './styles.scss';
 
-const Button = ({ children, variant, onClick }: React.PropsWithChildren<ButtonType>) => (
+const Button: ButtonType = ({ children, onClick, variant }) => (
   <button className={`button ${variant ? `button--${variant}` : ''}`} {...{ onClick }}>
     {children}
   </button>
 );
 
-const NavButton = ({ children, isMenuOpen, onClick }: React.PropsWithChildren<NavButtonType>) => (
+const NavButton: NavButtonType = ({ children, isMenuOpen, onClick }) => (
   <div className="button__header__container">
     <button
       className={`button__header button__header--${isMenuOpen ? 'on' : 'off'}`}
