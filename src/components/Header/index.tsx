@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { NavButton } from 'components/Button';
 // import Nav from '../../components/Nav/Nav';
-// import Button from '../../components/Button/Button';
 import './styles.scss';
 
 const Header = (): JSX.Element => {
@@ -40,9 +40,9 @@ const Header = (): JSX.Element => {
       <div className="header">
         <div className="header__container">
           <div className="header__logo"></div>
-          {/* <Button onClick={toggleMenu} isNavButton={true} isMenuOpen={menuOpen}>
+          <NavButton onClick={toggleMenu} isMenuOpen={menuOpen}>
             Main Menu
-          </Button> */}
+          </NavButton>
         </div>
       </div>
       {/* <Nav isMenuOpen={menuOpen} areLinksVisible={showLinks} /> */}
