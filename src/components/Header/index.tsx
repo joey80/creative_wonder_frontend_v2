@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavButton } from 'components/Button';
-// import Nav from '../../components/Nav/Nav';
+import { Nav } from 'components/Nav';
 import './styles.scss';
 
 const Header = (): JSX.Element => {
@@ -45,7 +45,7 @@ const Header = (): JSX.Element => {
           </NavButton>
         </div>
       </div>
-      {/* <Nav isMenuOpen={menuOpen} areLinksVisible={showLinks} /> */}
+      <Nav isMenuOpen={menuOpen} areLinksVisible={showLinks} />
     </div>
   );
 };

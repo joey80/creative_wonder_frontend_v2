@@ -1,0 +1,177 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixins';
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $primaryBlueColor;
+  color: rgba(255, 255, 255, 0);
+  font-size: 1rem;
+  transition: all 0.4s ease-out;
+  overflow-x: hidden;
+  z-index: 1;
+
+  @include tablet {
+    margin-top: 80px;
+    position: fixed;
+    display: block;
+    transform: translateY(0);
+    overflow-x: visible;
+    height: 60px;
+    font-size: 0.95rem;
+  }
+
+  &__container {
+    max-width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    margin: 0 auto;
+    height: inherit;
+
+    @include tablet {
+      max-width: 1170px;
+      max-height: 100%;
+      overflow: initial;
+    }
+  }
+
+  & a:link {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  & a:visited {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  & a:active {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  & a:hover {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  &__list__first {
+    padding-top: 5px;
+    padding-left: 20px;
+    height: inherit;
+    cursor: pointer;
+    list-style-type: none;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+    color: transparent;
+
+    @include tablet {
+      margin: 0;
+      padding-top: 20px;
+      display: inline-flex;
+    }
+  }
+
+  & li:hover {
+    color: $primaryGreenColor;
+  }
+
+  & ul li {
+    padding-bottom: 20px;
+
+    @include tablet {
+      padding-bottom: 0;
+      padding-right: 48px;
+    }
+  }
+
+  & ul ul {
+    display: block;
+    background-color: $primaryLightBlueColor;
+    min-width: 800px;
+    margin-left: -25px;
+    margin-top: 10px;
+
+    @include tablet {
+      position: absolute;
+      display: none;
+      margin: 14px auto;
+      border-radius: 0 10px;
+      width: auto;
+      min-width: 3000px;
+      margin-left: -25px;
+      text-align: left;
+    }
+  }
+
+  & ul li:hover > ul {
+    @include tablet {
+      color: rgba(255, 255, 255, 0.3);
+      display: block;
+    }
+  }
+
+  & ul ul li {
+    list-style-type: none;
+    padding: 15px 10px 15px 0;
+
+    @include tablet {
+      display: inline-flex;
+      cursor: pointer;
+      padding: 15px 20px 15px 0;
+    }
+  }
+
+  & ul ul li:after {
+    content: none;
+    margin-left: 0;
+
+    @include tablet {
+      font-size: 0.8rem;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      margin-left: 20px;
+      padding: 0;
+      content: '|';
+      text-decoration: inherit;
+      color: rgba(251, 248, 248, 0.2);
+    }
+  }
+
+  & ul ul li:last-child:after {
+    content: none;
+  }
+
+  &__arrow:after {
+    content: none;
+
+    @include tablet {
+      font-family: FontAwesome;
+      font-size: 0.4em;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      margin-left: 8px;
+      content: '\f078';
+      text-decoration: inherit;
+    }
+  }
+
+  &--hidden {
+    margin-top: 0;
+    transition: all 0.4s ease;
+    transform: translateY(-100%);
+  }
+
+  &--down {
+    transition: all 0.4s ease-out;
+    transform: translateY(0);
+    color: #fff;
+  }
+}
