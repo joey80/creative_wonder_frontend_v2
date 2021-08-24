@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface ButtonProps {
-  onClick: () => void;
-  variant: 'small';
+  onClick?: () => void;
+  variant?: 'small';
 }
 
 interface NavButtonProps extends Pick<ButtonProps, 'onClick'> {
