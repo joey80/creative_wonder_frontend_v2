@@ -6,7 +6,7 @@ export default {
   component: Button,
 };
 
-const Primary = () => <Button>Click Me</Button>;
-const Nav = () => <NavButton isMenuOpen={false}>Open Menu</NavButton>;
+const Primary = (): JSX.Element => <Button>Click Me</Button>;
+const Nav = (): JSX.Element => <NavButton isMenuOpen={false}>Open Menu</NavButton>;
 
 export { Primary, Nav };
